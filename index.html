@@ -14,6 +14,37 @@
     <title>Tip Calculator App</title>
   </head>
   <body>
-    <main class="main-container">test</main>
+    <main class="main-container">
+      <section class="inputs-section">
+        <div class="bill-container">
+          <label for="bill" class="bill-label">Bill</label>
+          <input type="number" name="bill" id="bill" />
+          <span class="money-sign"
+            ><img src="images/icon-dollar.svg" alt="dollar sign icon"
+          /></span>
+        </div>
+        <div class="tip-selection-container">
+          <div class="tip-header">
+            <p>Select Tip %</p>
+          </div>
+          <div class="tip-options">
+            <button class="tip-btn">5%</button>
+            <button class="tip-btn">10%</button>
+            <button class="tip-btn">15%</button>
+            <button class="tip-btn">25%</button>
+            <button class="tip-btn">50%</button>
+            <button class="tip-btn custom-btn">Custom</button>
+          </div>
+        </div>
+        <div class="num-people-container">
+          <label for="people">Bill</label>
+          <input type="number" name="num-people" id="num-people" />
+          <span class="people-icon"
+            ><img src="images/icon-person.svg" alt="people icon"
+          /></span>
+        </div>
+      </section>
+      <section class="amount-section"></section>
+    </main>
   </body>
 </html>
