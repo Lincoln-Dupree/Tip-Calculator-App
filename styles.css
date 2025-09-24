@@ -30,8 +30,8 @@
 html {
   font-family: "Space Mono", monospace;
   font-size: 1.1vw;
-  /* font-weight: 700; */
   color: var(--Grey-500);
+  font-weight: 700;
 }
 
 body {
@@ -80,7 +80,6 @@ body {
 
 .bill-label {
   font-size: 1.125rem;
-  font-weight: 700;
 }
 
 .bill-input {
@@ -91,7 +90,7 @@ body {
   border: none;
   border-radius: 0.35rem;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: inherit;
   background-color: var(--Gray-Custom-bg);
 }
 
@@ -110,13 +109,6 @@ body {
   top: 57.5%;
 }
 
-.amount-section {
-  background-color: blueviolet;
-  width: 50%;
-  height: 100%;
-  border-radius: 2rem;
-}
-
 .tip-selection-container {
   display: flex;
   flex-direction: column;
@@ -126,7 +118,6 @@ body {
 
 .tip-header {
   font-size: 1.125rem;
-  font-weight: 700;
 }
 
 .tip-options {
@@ -137,19 +128,22 @@ body {
 }
 
 .tip-btn {
-  padding: 0.35rem;
+  padding: 0.25rem;
   border: none;
   border-radius: 0.5rem;
   background-color: var(--Green-900);
   color: var(--White);
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: inherit;
   font-family: inherit;
 }
 
 .custom-tip {
   background-color: var(--Gray-Custom-bg);
-  color: ;
+  color: var(--Green-900);
+  font-size: 1.5rem;
+  font-weight: inherit;
+  font-family: inherit;
   border: none;
   border-radius: 0.5rem;
   text-align: center;
@@ -157,7 +151,8 @@ body {
 
 .custom-tip::placeholder {
   font-size: 1.5rem;
-  font-weight: 700;
+
+  color: var(--Grey-500);
 }
 
 .num-people-container {
@@ -170,7 +165,6 @@ body {
 
 .num-people-label {
   font-size: 1.125rem;
-  font-weight: 700;
 }
 
 .num-people-input {
@@ -181,7 +175,7 @@ body {
   border: none;
   border-radius: 0.35rem;
   font-family: inherit;
-  font-weight: 700;
+  font-weight: inherit;
   background-color: var(--Gray-Custom-bg);
 }
 
@@ -194,4 +188,79 @@ body {
   position: absolute;
   left: 1rem;
   top: 60%;
+}
+
+.amount-section {
+  background-color: var(--Green-900);
+  width: 50%;
+  height: 100%;
+  border-radius: 2rem;
+  padding: 3rem 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.all-amounts-display {
+  /* background-color: bisque; */
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.tip-amount-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.tip-amount-header {
+  color: var(--White);
+}
+
+.tip-amount-subheader {
+  color: var(--Grey-400);
+  font-size: 0.8rem;
+}
+
+.tip-amount-display {
+  color: var(--Green-400);
+  font-size: 3rem;
+}
+
+.total-amount-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.total-header {
+  color: var(--White);
+}
+
+.total-subheader {
+  color: var(--Grey-400);
+  font-size: 0.8rem;
+}
+
+.total-amount-display {
+  color: var(--Green-400);
+  font-size: 3rem;
+}
+
+.reset-container {
+  width: 100%;
+}
+
+.reset-btn {
+  width: 100%;
+  height: auto;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--Green-800);
+  color: var(--Green-900);
 }
