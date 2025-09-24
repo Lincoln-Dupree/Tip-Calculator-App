@@ -1,15 +1,24 @@
 :root {
-  /* Primary */
-  --Green-400: hsl(172, 67%, 45%);
-
-  /* Neutral */
-
+  /* GREENS */
   --Green-900: hsl(183, 100%, 15%);
+  --Green-800: hsl(183, 85%, 21%);
+  --Green-750: hsl(183, 79%, 24%);
+  --Green-400: hsl(172, 67%, 45%);
+  --Green-200: hsl(173, 61%, 77%);
+
+  /* GRAYS */
+  --Grey-600: hsl(180, 25%, 32%);
+  --Grey-550: hsl(180, 18%, 40%);
   --Grey-500: hsl(186, 14%, 43%);
   --Grey-400: hsl(184, 14%, 56%);
+  --Grey-300: hsl(184, 19%, 68%);
   --Grey-200: hsl(185, 41%, 84%);
   --Grey-50: hsl(189, 47%, 97%);
+  --Gray-Custom-bg: rgb(234, 245, 246);
   --White: rgb(250, 250, 250);
+
+  /* ORANGE */
+  --Orange-400: hsl(13, 70%, 60%);
 }
 
 * {
@@ -50,7 +59,7 @@ body {
 }
 
 .inputs-section {
-  background-color: bisque;
+  background-color: var(--White);
   width: 50%;
   height: 100%;
   border-radius: 2rem;
@@ -66,6 +75,7 @@ body {
   flex-direction: column;
   width: 100%;
   gap: 0.5rem;
+  position: relative;
 }
 
 .bill-label {
@@ -73,9 +83,115 @@ body {
   font-weight: 700;
 }
 
+.bill-input {
+  text-align: right;
+  font-size: 1.5rem;
+  color: var(--Green-900);
+  padding: 0.35rem 1rem;
+  border: none;
+  border-radius: 0.35rem;
+  font-family: inherit;
+  font-weight: 700;
+  background-color: var(--Gray-Custom-bg);
+}
+
+::placeholder {
+  color: var(--Grey-400);
+}
+
+.money-sign {
+  width: 1rem;
+  height: auto;
+}
+
+.money-sign-span {
+  position: absolute;
+  left: 1rem;
+  top: 57.5%;
+}
+
 .amount-section {
   background-color: blueviolet;
   width: 50%;
   height: 100%;
   border-radius: 2rem;
+}
+
+.tip-selection-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+}
+
+.tip-header {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.tip-options {
+  display: grid;
+  max-width: 100%;
+  grid-template-columns: repeat(3, 33%);
+  gap: 1rem;
+}
+
+.tip-btn {
+  padding: 0.35rem;
+  border: none;
+  border-radius: 0.5rem;
+  background-color: var(--Green-900);
+  color: var(--White);
+  font-size: 1.5rem;
+  font-weight: 700;
+  font-family: inherit;
+}
+
+.custom-tip {
+  background-color: var(--Gray-Custom-bg);
+  color: ;
+  border: none;
+  border-radius: 0.5rem;
+  text-align: center;
+}
+
+.custom-tip::placeholder {
+  font-size: 1.5rem;
+  font-weight: 700;
+}
+
+.num-people-container {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  gap: 0.5rem;
+  position: relative;
+}
+
+.num-people-label {
+  font-size: 1.125rem;
+  font-weight: 700;
+}
+
+.num-people-input {
+  text-align: right;
+  font-size: 1.5rem;
+  color: var(--Green-900);
+  padding: 0.35rem 1rem;
+  border: none;
+  border-radius: 0.35rem;
+  font-family: inherit;
+  font-weight: 700;
+  background-color: var(--Gray-Custom-bg);
+}
+
+.people-icon {
+  width: 1rem;
+  height: auto;
+}
+
+.people-icon-span {
+  position: absolute;
+  left: 1rem;
+  top: 60%;
 }

@@ -18,9 +18,19 @@
       <section class="inputs-section">
         <div class="bill-container">
           <label for="bill" class="bill-label">Bill</label>
-          <input type="number" name="bill" id="bill" />
-          <span class="money-sign"
-            ><img src="images/icon-dollar.svg" alt="dollar sign icon"
+          <input
+            type="text"
+            inputmode="numeric"
+            name="bill"
+            id="bill"
+            placeholder="0"
+            class="bill-input input"
+          />
+          <span class="money-sign-span"
+            ><img
+              src="images/icon-dollar.svg"
+              alt="dollar sign icon"
+              class="money-sign"
           /></span>
         </div>
         <div class="tip-selection-container">
@@ -33,14 +43,25 @@
             <button class="tip-btn">15%</button>
             <button class="tip-btn">25%</button>
             <button class="tip-btn">50%</button>
-            <button class="tip-btn custom-btn">Custom</button>
+            <input type="text" placeholder="Custom" class="custom-tip input" />
           </div>
         </div>
         <div class="num-people-container">
-          <label for="people">Bill</label>
-          <input type="number" name="num-people" id="num-people" />
-          <span class="people-icon"
-            ><img src="images/icon-person.svg" alt="people icon"
+          <label for="num-people" class="num-people-label"
+            >Number of People</label
+          >
+          <input
+            type="text"
+            name="num-people"
+            id="num-people"
+            placeholder="0"
+            class="num-people-input input"
+          />
+          <span class="people-icon-span"
+            ><img
+              src="images/icon-person.svg"
+              alt="people icon"
+              class="people-icon"
           /></span>
         </div>
       </section>
