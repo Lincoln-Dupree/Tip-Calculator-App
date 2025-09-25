@@ -75,6 +75,7 @@ body {
   flex-direction: column;
   width: 100%;
   gap: 0.5rem;
+  position: relative;
 }
 
 .bill-label {
@@ -161,21 +162,27 @@ body {
   z-index: 2;
 }
 
-.custom-tip-container:hover::after,
-.custom-tip-container:active::after,
+@property --angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
 .has-input::after,
-.custom-tip-container:hover::before,
-.custom-tip-container:active::before,
 .has-input::before {
-  --angle: 0deg;
   content: "";
   position: absolute;
   height: 100%;
   width: 100%;
   background-image: conic-gradient(
     from var(--angle),
-    transparent 65%,
-    var(--Green-750)
+    var(--Green-200),
+    var(--Green-200),
+    var(--Green-400),
+    var(--Green-200),
+    var(--Green-200),
+    var(--Green-400),
+    var(--Green-200)
   );
   top: 50%;
   left: 50%;
@@ -183,16 +190,24 @@ body {
   z-index: 1;
   padding: 2px;
   border-radius: 0.5rem;
-  animation: 3s spin linear infinite;
+  animation: 2s spin linear infinite;
 }
 
 .has-input::before {
-  filter: blur(100rem);
+  filter: blur(1rem);
   opacity: 50%;
 }
 
+@keyframes spin {
+  from {
+    --angle: 0deg;
+  }
+  to {
+    --angle: 360deg;
+  }
+}
+
 .custom-tip {
-  display: none;
   width: 100%;
   height: 100%;
   background-color: var(--Gray-Custom-bg);
@@ -213,6 +228,20 @@ body {
   font-family: inherit;
   color: var(--Grey-500);
   z-index: 2;
+}
+
+.custom-tip:hover,
+.custom-tip:active {
+  background-color: var(--Green-200);
+}
+
+.custom-tip:hover::placeholder,
+.custom-tip:active::placeholder {
+  color: var(--Green-900);
+}
+
+.custom-tip:focus::placeholder {
+  color: transparent;
 }
 
 .custom-tip:focus {
