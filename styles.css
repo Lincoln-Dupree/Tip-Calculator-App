@@ -29,7 +29,7 @@
 
 html {
   font-family: "Space Mono", monospace;
-  font-size: 1.1vw;
+  font-size: min(1.1vw, 1.55vh);
   color: var(--Grey-500);
   font-weight: 700;
 }
@@ -94,6 +94,15 @@ body {
   background-color: var(--Gray-Custom-bg);
 }
 
+.bill-input:hover,
+.bill-input:active {
+  border: 1px solid var(--Green-400);
+}
+
+.bill-input:focus {
+  outline: none;
+}
+
 ::placeholder {
   color: var(--Grey-400);
 }
@@ -124,11 +133,10 @@ body {
   display: grid;
   max-width: 100%;
   grid-template-columns: repeat(3, 33%);
-  gap: 1rem;
 }
 
 .tip-btn {
-  padding: 0.25rem;
+  padding: 0.35rem;
   border: none;
   border-radius: 0.5rem;
   background-color: var(--Green-900);
@@ -136,6 +144,13 @@ body {
   font-size: 1.5rem;
   font-weight: inherit;
   font-family: inherit;
+  margin: 0.5rem;
+}
+
+.tip-btn:hover,
+.tip-btn:active {
+  background-color: var(--Green-200);
+  color: var(--Green-900);
 }
 
 .custom-tip {
@@ -147,11 +162,13 @@ body {
   border: none;
   border-radius: 0.5rem;
   text-align: center;
+  margin: 0.5rem;
 }
 
 .custom-tip::placeholder {
   font-size: 1.5rem;
-
+  font-weight: inherit;
+  font-family: inherit;
   color: var(--Grey-500);
 }
 
@@ -263,4 +280,11 @@ body {
   border-radius: 0.5rem;
   background-color: var(--Green-800);
   color: var(--Green-900);
+  font-family: inherit;
+  font-weight: inherit;
+}
+
+.reset-btn:hover,
+.reset-btn:active {
+  background-color: var(--Green-200);
 }
