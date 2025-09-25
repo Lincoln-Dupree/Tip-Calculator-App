@@ -156,6 +156,11 @@ body {
   color: var(--Green-900);
 }
 
+.selected-tip {
+  background-color: var(--Green-200);
+  color: var(--Green-900);
+}
+
 .custom-tip-container {
   margin: 0.5rem;
   position: relative;
