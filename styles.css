@@ -75,7 +75,6 @@ body {
   flex-direction: column;
   width: 100%;
   gap: 0.5rem;
-  position: relative;
 }
 
 .bill-label {
@@ -83,6 +82,7 @@ body {
 }
 
 .bill-input {
+  width: 100%;
   text-align: right;
   font-size: 1.5rem;
   color: var(--Green-900);
@@ -92,6 +92,7 @@ body {
   font-family: inherit;
   font-weight: inherit;
   background-color: var(--Gray-Custom-bg);
+  border: 1px solid transparent;
 }
 
 .bill-input:hover,
@@ -101,6 +102,7 @@ body {
 
 .bill-input:focus {
   outline: none;
+  border: 1px solid var(--Green-400);
 }
 
 ::placeholder {
@@ -153,7 +155,46 @@ body {
   color: var(--Green-900);
 }
 
+.custom-tip-container {
+  margin: 0.5rem;
+  position: relative;
+  z-index: 2;
+}
+
+.custom-tip-container:hover::after,
+.custom-tip-container:active::after,
+.has-input::after,
+.custom-tip-container:hover::before,
+.custom-tip-container:active::before,
+.has-input::before {
+  --angle: 0deg;
+  content: "";
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: conic-gradient(
+    from var(--angle),
+    transparent 65%,
+    var(--Green-750)
+  );
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  z-index: 1;
+  padding: 2px;
+  border-radius: 0.5rem;
+  animation: 3s spin linear infinite;
+}
+
+.has-input::before {
+  filter: blur(100rem);
+  opacity: 50%;
+}
+
 .custom-tip {
+  display: none;
+  width: 100%;
+  height: 100%;
   background-color: var(--Gray-Custom-bg);
   color: var(--Green-900);
   font-size: 1.5rem;
@@ -162,7 +203,8 @@ body {
   border: none;
   border-radius: 0.5rem;
   text-align: center;
-  margin: 0.5rem;
+  z-index: 2;
+  position: relative;
 }
 
 .custom-tip::placeholder {
@@ -170,6 +212,11 @@ body {
   font-weight: inherit;
   font-family: inherit;
   color: var(--Grey-500);
+  z-index: 2;
+}
+
+.custom-tip:focus {
+  outline: none;
 }
 
 .num-people-container {
@@ -194,6 +241,17 @@ body {
   font-family: inherit;
   font-weight: inherit;
   background-color: var(--Gray-Custom-bg);
+  border: 1px solid transparent;
+}
+
+.num-people-input:hover,
+.num-people-input:active {
+  border: 1px solid var(--Green-400);
+}
+
+.num-people-input:focus {
+  outline: none;
+  border: 1px solid var(--Green-400);
 }
 
 .people-icon {
@@ -282,6 +340,7 @@ body {
   color: var(--Green-900);
   font-family: inherit;
   font-weight: inherit;
+  font-size: 1rem;
 }
 
 .reset-btn:hover,
