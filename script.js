@@ -61,14 +61,15 @@ customTipInput.addEventListener("input", function () {
         option.classList.remove("selected-tip");
     };
 
+    // adding class to update styling
     customTipContainer.classList.add("has-input");
 
     selectedTipAmount = Number(customTipInput.value);
-    console.log(selectedTipAmount);
 
     getFinals();
 })
 
+// event listener for the number of people input
 peopleInput.addEventListener("input", function () {
     numPeople = Number(peopleInput.value);
 
