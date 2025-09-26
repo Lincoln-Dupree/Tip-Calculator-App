@@ -54,8 +54,8 @@ input::-webkit-inner-spin-button {
 
 .main-container {
   background-color: var(--White);
-  width: 65%;
-  height: min(50%, 33vw);
+  width: min(65%, 91vh);
+  height: min(50%, 36vw);
   border-radius: 2rem;
   display: flex;
   flex-direction: row;
