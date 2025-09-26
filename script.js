@@ -15,6 +15,8 @@ let splitTip = document.querySelector(".tip-amount-display");
 let finalTip = 0.00;
 let splitTotal = document.querySelector(".total-amount-display");
 let finalTotal = 0.00;
+let resetBtn = document.querySelector(".reset-btn");
+let errorMsg = document.querySelector(".error-msg");
 
 // defining outside click events since multiple uses
 function getFinals() {
@@ -73,5 +75,17 @@ customTipInput.addEventListener("input", function () {
 peopleInput.addEventListener("input", function () {
     numPeople = Number(peopleInput.value);
 
+    if (numPeople <= 0) {
+        peopleInput.classList.add("zero-people");
+        errorMsg.style.display = "block";
+    } else {
+        peopleInput.classList.remove("zero-people");
+        errorMsg.style.display = "none";
+    }
+
     getFinals();
+})
+
+resetBtn.addEventListener("click", function () {
+    location.reload();
 })

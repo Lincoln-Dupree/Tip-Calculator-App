@@ -63,6 +63,21 @@ input::-webkit-inner-spin-button {
   align-items: center;
   padding: 2rem 2.5rem;
   gap: 2rem;
+  position: relative;
+}
+
+.logo-container {
+  position: absolute;
+  /* background-color: coral; */
+  text-align: center;
+  width: 100%;
+  top: 12.5%;
+  right: 0;
+}
+
+.logo {
+  width: 6rem;
+  height: auto;
 }
 
 .inputs-section {
@@ -270,6 +285,14 @@ input::-webkit-inner-spin-button {
 
 .num-people-label {
   font-size: 1.125rem;
+  position: relative;
+}
+
+.error-msg {
+  display: none;
+  position: absolute;
+  right: 0;
+  color: var(--Orange-400);
 }
 
 .num-people-input {
@@ -285,14 +308,23 @@ input::-webkit-inner-spin-button {
   border: 1px solid transparent;
 }
 
-.num-people-input:hover,
-.num-people-input:active {
+.zero-people {
+  border: 1px solid var(--Orange-400);
+}
+
+.num-people-input:hover:not(.zero-people),
+.num-people-input:active:not(.zero-people) {
   border: 1px solid var(--Green-400);
 }
 
 .num-people-input:focus {
   outline: none;
   border: 1px solid var(--Green-400);
+}
+
+.num-people-input:focus.zero-people {
+  outline: none;
+  border: 1px solid var(--Orange-400);
 }
 
 .people-icon {
