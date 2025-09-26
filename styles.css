@@ -45,6 +45,13 @@ body {
   height: 100dvh;
 }
 
+/* removes the default arrows on number-type inputs */
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
 .main-container {
   background-color: var(--White);
   width: 65%;
